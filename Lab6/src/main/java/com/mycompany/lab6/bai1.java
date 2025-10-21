@@ -4,6 +4,8 @@
 
 package com.mycompany.lab6;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ICT
@@ -11,6 +13,14 @@ package com.mycompany.lab6;
 public class bai1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nhap ho ten");
+        String hoTen = sc.nextLine();
+
+        String ho = hoTen.substring(0, hoTen.indexOf(" "));
+        String tenDem = hoTen.substring(hoTen.indexOf(" ") + 1, hoTen.lastIndexOf(" "));
+        String ten = hoTen.substring(hoTen.lastIndexOf(" ") + 1);
+
+        System.out.println(ho.toUpperCase() + tenDem + ten.toUpperCase());
     }
 }
